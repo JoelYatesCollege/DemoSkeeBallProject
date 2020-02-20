@@ -14,7 +14,12 @@ class DEMOSKEEBALLPROJECT_API ADemoSkeeBallProjectGameModeBase : public AGameMod
 {
 	GENERATED_BODY()
 	
-	
-	
-	
+private:
+	int m_iScore;
+public:
+	void BeginPlay() override;
+	UFUNCTION(BlueprintCallable)
+	void SetScore(int newScore);
+	UFUNCTION(BlueprintCallable)
+	int GetScore();
 };
