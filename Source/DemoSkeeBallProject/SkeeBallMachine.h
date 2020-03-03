@@ -21,6 +21,8 @@ public:
 	void AddToScore(int points);
 	UFUNCTION(BlueprintCallable)
 	int GetTheScore();
+//	virtual void DefaultThink() override;
 
+	//bool m_bHasPlayerWon;
 	UStaticMeshComponent* m_pStaticMeshComponent;
 };
