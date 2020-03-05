@@ -1,7 +1,6 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #include "SpawnBallButton.h"
-#include "SkeeBall.h"
 
 ASpawnBallButton::ASpawnBallButton() {
 	m_pSpawnLocationMesh = CreateDefaultSubobject<UStaticMeshComponent>("static mesh");
@@ -19,7 +18,12 @@ ASpawnBallButton::ASpawnBallButton() {
 
 void ASpawnBallButton::OnPressed_Implementation(ABaseController* pController) {
 	FVector loc = m_pSpawnLocationMesh->GetComponentLocation();
-	ASkeeBall* skeeBall = (ASkeeBall*) GetWorld()->SpawnActor(ASkeeBall::StaticClass(), &loc);
+	if (!skeeBall) {
+		skeeBall = (ASkeeBall*)GetWorld()->SpawnActor(ASkeeBall::StaticClass(), &loc);
+	}
+	skeeBall->SetActorHiddenInGame(true);
+	skeeBall->SetActorHiddenInGame(false);
+	skeeBall->SetActorLocation(loc);
 }
 
 

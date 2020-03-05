@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "VRBase/AWorldButton/AWorldButton.h"
+#include "SkeeBall.h"
 #include "SpawnBallButton.generated.h"
 
 /**
@@ -21,5 +22,5 @@ class DEMOSKEEBALLPROJECT_API ASpawnBallButton : public AWorldButton
 
 	void OnPressed_Implementation(ABaseController* pController) override;
 	
-	
+	ASkeeBall* skeeBall;
 };
