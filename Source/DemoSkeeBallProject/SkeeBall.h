@@ -15,6 +15,4 @@ class DEMOSKEEBALLPROJECT_API ASkeeBall : public APickup
 	GENERATED_BODY()
 
 	ASkeeBall();
-	
-//	UStaticMeshComponent* m_pStaticMeshComponent;
 };

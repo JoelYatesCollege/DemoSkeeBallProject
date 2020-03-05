@@ -7,9 +7,6 @@
 #include "VRBase/ABaseEntity/ABaseEntity.h"
 #include "SkeeBallMachine.generated.h"
 
-/**
- * 
- */
 UCLASS()
 class DEMOSKEEBALLPROJECT_API ASkeeBallMachine : public ABaseEntity
 {
@@ -21,8 +18,8 @@ public:
 	void AddToScore(int points);
 	UFUNCTION(BlueprintCallable)
 	int GetTheScore();
-//	virtual void DefaultThink() override;
+	virtual void DefaultThink() override;
 
-	//bool m_bHasPlayerWon;
+	bool m_bHasPlayerWon;
 	UStaticMeshComponent* m_pStaticMeshComponent;
 };

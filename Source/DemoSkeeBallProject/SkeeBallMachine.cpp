@@ -14,7 +14,7 @@ ASkeeBallMachine::ASkeeBallMachine() {
 	FVector scale = FVector(scaleFactor);
 	m_pStaticMeshComponent->SetWorldScale3D(scale);
 
-	//m_bHasPlayerWon = false;
+	m_bHasPlayerWon = false;
 }
 
 void ASkeeBallMachine::AddToScore(int points) {
@@ -25,7 +25,7 @@ void ASkeeBallMachine::AddToScore(int points) {
 		// add to score
 		mode->SetScore(currScore + points);
 	}
-	//m_bHasPlayerWon = (mode->GetScore() >= mode->m_iWinScore);
+	m_bHasPlayerWon = (mode->GetScore() >= mode->m_iWinScore);
 }
 
 int ASkeeBallMachine::GetTheScore() {
@@ -38,10 +38,9 @@ int ASkeeBallMachine::GetTheScore() {
 	// return the score, is -1 if mode is null
 	return currScore;
 }
-/*
+
 void ASkeeBallMachine::DefaultThink() {
 	if (m_bHasPlayerWon) {
 		Msg("You Won!");
 	}
 }
-*/

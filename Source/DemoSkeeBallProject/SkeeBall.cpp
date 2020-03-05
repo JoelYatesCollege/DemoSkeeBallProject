@@ -3,8 +3,6 @@
 #include "SkeeBall.h"
 
 ASkeeBall::ASkeeBall() {
-	//m_pStaticMeshComponent = CreateDefaultSubobject<UStaticMeshComponent>("static mesh");
-	//RootComponent = m_pStaticMeshComponent;
 	RootComponent = m_pPickupMeshComponent;
 	UStaticMesh* mesh = FindMesh("StaticMesh'/Game/Meshes/SkeeBall.SkeeBall'");
 	m_pPickupMeshComponent->SetStaticMesh(mesh);
