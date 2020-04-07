@@ -26,4 +26,3 @@ void ASpawnBallButton::OnPressed_Implementation(ABaseController* pController) {
 	skeeBall->SetActorLocation(loc);
 }
 
-

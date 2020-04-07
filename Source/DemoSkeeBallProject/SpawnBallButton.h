@@ -21,6 +21,6 @@ class DEMOSKEEBALLPROJECT_API ASpawnBallButton : public AWorldButton
 	UStaticMeshComponent* m_pSpawnLocationMesh;
 
 	void OnPressed_Implementation(ABaseController* pController) override;
-	
+
 	ASkeeBall* skeeBall;
 };
